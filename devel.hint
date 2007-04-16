@@ -1,5 +1,5 @@
 category: Gnome Net
-requires: cygwin glib2-devel gnutls-devel
+requires: cygwin glib2-devel libgetaddrinfo-devel libgnutls-devel libidn-devel
 external-source: loudmouth
 sdesc: "Lightweight Jabber protocol C library (development)"
 ldesc: "Loudmouth is a lightweight and easy-to-use C library for programming

@@ -5,23 +5,26 @@ with the Jabber protocol. It's designed to be easy to get started with
 and yet extensible to let you do anything the Jabber protocol allows.
 
 Runtime requirements:
-  cygwin-1.5.21-1
-  glib2-2.10.3-1
-  libgnutls11-1.0.25-2
+  cygwin-1.5.24-2
+  glib2-2.12.9-1
+  libgetaddrinfo0-1.6.3-2
+  libgnutls13-1.6.1-1
+  libidn11-0.6.7-1
 
 Build requirements:
 (besides corresponding -devel packages)
-  cygwin-1.5.21-1
-  autoconf2.5-2.59-2
-  automake1.9-1.9.6-1
-  binutils-20060709-1
-  gawk-3.1.5-2
-  gcc-core-3.4.4-1
-  gtk-doc-1.5-1
-  libtool1.5-1.5.22-1
+  cygwin-1.5.24-2
+  autoconf2.5-2.61-1
+  automake1.9-1.9.6-2
+  binutils-20060817-1
+  cygport-0.2.11-1
+  gawk-3.1.5-4
+  gcc-core-3.4.4-3
+  gtk-doc-1.7-1
+  libtool1.5-1.5.23a-2
   make-3.81-1
-  pkg-config-0.20-1
-  sed-4.1.5-1
+  pkg-config-0.21-1
+  sed-4.1.5-2
 
 Canonical website:
   http://developer.imendio.com/wiki/Loudmouth
@@ -32,35 +35,35 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack loudmouth-1.0.1-X-src.tar.bz2
+  unpack loudmouth-1.2.1-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  ./loudmouth-1.0.1-X.sh all
+  cygport ./loudmouth-1.2.1-X.cygport all
 
 This will create:
-  /usr/src/loudmouth-1.0.1-X-src.tar.bz2
-  /usr/src/loudmouth-1.0.1-X.tar.bz2
-  /usr/src/loudmouth-devel-1.0.1-X.tar.bz2
-  /usr/src/loudmouth-doc-1.0.1-X.tar.bz2
+  /usr/src/loudmouth-1.2.1-X-src.tar.bz2
+  /usr/src/loudmouth-1.2.1-X.tar.bz2
+  /usr/src/loudmouth-devel-1.2.1-X.tar.bz2
+  /usr/src/loudmouth-doc-1.2.1-X.tar.bz2
 
 -------------------------------------------
 
-Files included in the main package:
+Files included in the binary packages:
 
+(loudmouth)
   /usr/bin/cygloudmouth-1-0.dll
-  /usr/share/doc/Cygwin/loudmouth-1.0.1.README
-  /usr/share/doc/loudmouth-1.0.1/AUTHORS
-  /usr/share/doc/loudmouth-1.0.1/ChangeLog
-  /usr/share/doc/loudmouth-1.0.1/CONTRIBUTORS
-  /usr/share/doc/loudmouth-1.0.1/COPYING
-  /usr/share/doc/loudmouth-1.0.1/getaddrinfo.README
-  /usr/share/doc/loudmouth-1.0.1/INSTALL
-  /usr/share/doc/loudmouth-1.0.1/NEWS
-  /usr/share/doc/loudmouth-1.0.1/README
+  /usr/share/doc/Cygwin/loudmouth-1.2.1.README
+  /usr/share/doc/loudmouth-1.2.1/AUTHORS
+  /usr/share/doc/loudmouth-1.2.1/ChangeLog
+  /usr/share/doc/loudmouth-1.2.1/CONTRIBUTORS
+  /usr/share/doc/loudmouth-1.2.1/COPYING
+  /usr/share/doc/loudmouth-1.2.1/getaddrinfo.README
+  /usr/share/doc/loudmouth-1.2.1/INSTALL
+  /usr/share/doc/loudmouth-1.2.1/NEWS
+  /usr/share/doc/loudmouth-1.2.1/README
 
-Files included in the devel package:
-
+(loudmouth-devel)
   /usr/include/loudmouth-1.0/loudmouth/lm-connection.h
   /usr/include/loudmouth-1.0/loudmouth/lm-error.h
   /usr/include/loudmouth-1.0/loudmouth/lm-message-handler.h
@@ -74,8 +77,7 @@ Files included in the devel package:
   /usr/lib/libloudmouth-1.la
   /usr/lib/pkgconfig/loudmouth-1.0.pc
 
-Files included in the doc package:
-
+(loudmouth-doc)
   /usr/share/gtk-doc/html/loudmouth/ch01.html
   /usr/share/gtk-doc/html/loudmouth/home.png
   /usr/share/gtk-doc/html/loudmouth/index.html
@@ -88,7 +90,9 @@ Files included in the doc package:
   /usr/share/gtk-doc/html/loudmouth/loudmouth-lm-message.html
   /usr/share/gtk-doc/html/loudmouth/loudmouth-lm-proxy.html
   /usr/share/gtk-doc/html/loudmouth/loudmouth-lm-ssl.html
+  /usr/share/gtk-doc/html/loudmouth/loudmouth-lm-utils.html
   /usr/share/gtk-doc/html/loudmouth/loudmouth.devhelp
+  /usr/share/gtk-doc/html/loudmouth/loudmouth.devhelp2
   /usr/share/gtk-doc/html/loudmouth/right.png
   /usr/share/gtk-doc/html/loudmouth/style.css
   /usr/share/gtk-doc/html/loudmouth/up.png
@@ -96,6 +100,9 @@ Files included in the doc package:
 ------------------
 
 Port Notes:
+
+----- version 1.2.1-1 -----
+Version bump.
 
 ----- version 1.0.4-1 -----
 Version bump, built with cygport.
