@@ -35,17 +35,16 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack loudmouth-1.2.2-X-src.tar.bz2
+  unpack loudmouth-1.2.3-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./loudmouth-1.2.2-X.cygport all
+  cygport ./loudmouth-1.2.3-X.cygport all
 
 This will create:
-  /usr/src/loudmouth-1.2.2-X-src.tar.bz2
-  /usr/src/loudmouth-1.2.2-X.tar.bz2
-  /usr/src/loudmouth-devel-1.2.2-X.tar.bz2
-  /usr/src/loudmouth-doc-1.2.2-X.tar.bz2
+  /usr/src/loudmouth-1.2.3-X-src.tar.bz2
+  /usr/src/loudmouth-1.2.3-X.tar.bz2
+  /usr/src/loudmouth-devel-1.2.3-X.tar.bz2
 
 -------------------------------------------
 
@@ -53,15 +52,15 @@ Files included in the binary packages:
 
 (loudmouth)
   /usr/bin/cygloudmouth-1-0.dll
-  /usr/share/doc/Cygwin/loudmouth-1.2.2.README
-  /usr/share/doc/loudmouth-1.2.2/AUTHORS
-  /usr/share/doc/loudmouth-1.2.2/ChangeLog
-  /usr/share/doc/loudmouth-1.2.2/CONTRIBUTORS
-  /usr/share/doc/loudmouth-1.2.2/COPYING
-  /usr/share/doc/loudmouth-1.2.2/getaddrinfo.README
-  /usr/share/doc/loudmouth-1.2.2/INSTALL
-  /usr/share/doc/loudmouth-1.2.2/NEWS
-  /usr/share/doc/loudmouth-1.2.2/README
+  /usr/share/doc/Cygwin/loudmouth-1.2.3.README
+  /usr/share/doc/loudmouth-1.2.3/AUTHORS
+  /usr/share/doc/loudmouth-1.2.3/ChangeLog
+  /usr/share/doc/loudmouth-1.2.3/CONTRIBUTORS
+  /usr/share/doc/loudmouth-1.2.3/COPYING
+  /usr/share/doc/loudmouth-1.2.3/getaddrinfo.README
+  /usr/share/doc/loudmouth-1.2.3/INSTALL
+  /usr/share/doc/loudmouth-1.2.3/NEWS
+  /usr/share/doc/loudmouth-1.2.3/README
 
 (loudmouth-devel)
   /usr/include/loudmouth-1.0/loudmouth/lm-connection.h
@@ -76,8 +75,6 @@ Files included in the binary packages:
   /usr/lib/libloudmouth-1.dll.a
   /usr/lib/libloudmouth-1.la
   /usr/lib/pkgconfig/loudmouth-1.0.pc
-
-(loudmouth-doc)
   /usr/share/gtk-doc/html/loudmouth/ch01.html
   /usr/share/gtk-doc/html/loudmouth/home.png
   /usr/share/gtk-doc/html/loudmouth/index.html
@@ -100,6 +97,9 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 1.2.3-1 -----
+Version bump.
 
 ----- version 1.2.2-1 -----
 Version bump.
