@@ -6,24 +6,24 @@ and yet extensible to let you do anything the Jabber protocol allows.
 
 Runtime requirements:
   cygwin-1.5.25-15
-  glib2-2.16.5-1
+  glib2-2.16.6-1
   libgetaddrinfo0-1.6.3-3
   libgnutls26-2.4.1-1
-  libidn11-1.7-1
-  libintl8-0.15-1
+  libidn11-1.8-1
+  libintl8-0.17-2
   minires-1.0.1-1
 
 Build requirements:
 (besides corresponding -devel packages)
-  autoconf2.5-2.61-1
-  automake1.10-1.10.1-1
-  binutils-20080523-2
-  cygport-0.4.0-1
+  autoconf2.5-2.63-1
+  automake1.10-1.10.1-2
+  binutils-20080624-2
+  cygport-0.4.2-1
   gawk-3.1.6-1
   gcc-core-3.4.4-3
-  gnome-common-2.20.0-2
+  gnome-common-2.24.0-1
   gtk-doc-1.10-1
-  libtool-2.2.2-2
+  libtool-2.2.6a-1
   make-3.81-1
   pkg-config-0.23a-2
   sed-4.1.5-2
@@ -37,32 +37,33 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack loudmouth-1.4.2-X-src.tar.bz2
+  unpack loudmouth-1.4.3-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./loudmouth-1.4.2-X.cygport all
+  cygport ./loudmouth-1.4.3-X.cygport all
 
 This will create:
-  /usr/src/loudmouth-1.4.2-X-src.tar.bz2
-  /usr/src/loudmouth-1.4.2-X.tar.bz2
-  /usr/src/loudmouth-devel-1.4.2-X.tar.bz2
+  /usr/src/libloudmouth1-devel-1.4.3-X.tar.bz2
+  /usr/src/libloudmouth1_0-1.4.3-X.tar.bz2
+  /usr/src/loudmouth-1.4.3-X-src.tar.bz2
+  /usr/src/loudmouth-1.4.3-X.tar.bz2
 
 -------------------------------------------
 
 Files included in the binary packages:
 
-(loudmouth)
+(libloudmouth1_0)
   /usr/bin/cygloudmouth-1-0.dll
-  /usr/share/doc/loudmouth-1.4.2/AUTHORS
-  /usr/share/doc/loudmouth-1.4.2/ChangeLog
-  /usr/share/doc/loudmouth-1.4.2/CONTRIBUTORS
-  /usr/share/doc/loudmouth-1.4.2/COPYING
-  /usr/share/doc/loudmouth-1.4.2/INSTALL
-  /usr/share/doc/loudmouth-1.4.2/NEWS
-  /usr/share/doc/loudmouth-1.4.2/README
+  /usr/share/doc/loudmouth-1.4.3/AUTHORS
+  /usr/share/doc/loudmouth-1.4.3/ChangeLog
+  /usr/share/doc/loudmouth-1.4.3/CONTRIBUTORS
+  /usr/share/doc/loudmouth-1.4.3/COPYING
+  /usr/share/doc/loudmouth-1.4.3/INSTALL
+  /usr/share/doc/loudmouth-1.4.3/NEWS
+  /usr/share/doc/loudmouth-1.4.3/README
 
-(loudmouth-devel)
+(libloudmouth1-devel)
   /usr/include/loudmouth-1.0/loudmouth/lm-connection.h
   /usr/include/loudmouth-1.0/loudmouth/lm-error.h
   /usr/include/loudmouth-1.0/loudmouth/lm-message-handler.h
@@ -97,6 +98,9 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 1.4.3-1 -----
+Version bump.
 
 ----- version 1.4.2-1 -----
 Version bump.
