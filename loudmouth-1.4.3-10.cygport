@@ -4,7 +4,6 @@ DESCRIPTION="Lightweight Jabber protocol C library"
 HOMEPAGE="http://developer.imendio.com/projects/loudmouth/"
 SRC_URI="http://ftp.imendio.com/pub/imendio/${PN}/src/${P}.tar.bz2"
 PATCH_URI="
-	1.4.0-getaddrinfo.patch
 	1.4.1-no-undefined.patch
 "
 
@@ -15,4 +14,3 @@ libloudmouth1_devel_CONTENTS='usr/include/ usr/lib/ usr/share/gtk-doc/'
 DIFF_EXCLUDES="loudmouth.spec"
 
 CYGCONF_ARGS="ac_cv_header_winsock2_h=no"
-LDFLAGS+=" -Wl,-lgetaddrinfo"
