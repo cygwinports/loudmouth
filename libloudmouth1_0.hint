@@ -1,7 +1,0 @@
-category: Gnome Net
-requires: libgcc1 libglib2.0_0 libgnutls26 libidn11 libintl8
-external-source: loudmouth
-sdesc: "Lightweight Jabber protocol C library (runtime)"
-ldesc: "Loudmouth is a lightweight and easy-to-use C library for programming
-with the Jabber protocol. It's designed to be easy to get started with
-and yet extensible to let you do anything the Jabber protocol allows."

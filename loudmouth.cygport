@@ -1,0 +1,34 @@
+inherit gnome2
+
+NAME="loudmouth"
+VERSION=1.4.3
+RELEASE=11
+CATEGORY="Net"
+SUMMARY="Lightweight Jabber protocol C library"
+DESCRIPTION="Loudmouth is a lightweight and easy-to-use C library for programming
+with the Jabber protocol. It's designed to be easy to get started with
+and yet extensible to let you do anything the Jabber protocol allows."
+HOMEPAGE="http://www.loudmouth-project.org/"
+SRC_URI="http://ftp.imendio.com/pub/imendio/${PN}/src/${P}.tar.bz2"
+PATCH_URI="
+	http://pkgs.fedoraproject.org/cgit/loudmouth.git/plain/loudmouth-1.4.3-async_assertion.patch
+	http://pkgs.fedoraproject.org/cgit/loudmouth.git/plain/loudmouth-1.4.3-fix-sasl-md5-digest-uri.patch
+	http://pkgs.fedoraproject.org/cgit/loudmouth.git/plain/loudmouth-1.4.3-glib-compile-fix.patch
+	http://pkgs.fedoraproject.org/cgit/loudmouth.git/plain/0001-Drop-stanzas-when-failing-to-convert-them-to-LmMessa.patch
+	1.4.1-no-undefined.patch
+	1.4.3-ca-certificates.patch
+	1.4.3-gnutls-config.patch
+"
+
+PKG_NAMES="lib${PN}1_0 lib${PN}1-devel"
+libloudmouth1_0_SUMMARY="${SUMMARY} (runtime)"
+libloudmouth1_0_REQUIRES="ca-certificates"
+libloudmouth1_0_CONTENTS="usr/bin/cyg${PN}-1-0.dll usr/share/doc/"
+libloudmouth1_devel_SUMMARY="${SUMMARY} (development)"
+libloudmouth1_devel_CONTENTS='usr/include/ usr/lib/ usr/share/gtk-doc/'
+
+DIFF_EXCLUDES="loudmouth.spec"
+
+CYGCONF_ARGS="--with-asyncns --with-ssl=gnutls ac_cv_header_winsock2_h=no"
+
+KEEP_LA_FILES="none"
