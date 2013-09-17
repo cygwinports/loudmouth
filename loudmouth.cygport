@@ -9,7 +9,7 @@ DESCRIPTION="Loudmouth is a lightweight and easy-to-use C library for programmin
 with the Jabber protocol. It's designed to be easy to get started with
 and yet extensible to let you do anything the Jabber protocol allows."
 HOMEPAGE="http://www.loudmouth-project.org/"
-SRC_URI="http://ftp.imendio.com/pub/imendio/${PN}/src/${P}.tar.bz2"
+SRC_URI="http://ftp.imendio.com/pub/imendio/loudmouth/src/loudmouth-${VERSION}.tar.bz2"
 PATCH_URI="
 	http://pkgs.fedoraproject.org/cgit/loudmouth.git/plain/loudmouth-1.4.3-async_assertion.patch
 	http://pkgs.fedoraproject.org/cgit/loudmouth.git/plain/loudmouth-1.4.3-fix-sasl-md5-digest-uri.patch
@@ -20,12 +20,14 @@ PATCH_URI="
 	1.4.3-gnutls-config.patch
 "
 
-PKG_NAMES="lib${PN}1_0 lib${PN}1-devel"
+PKG_NAMES="lib${NAME}1_0 lib${NAME}1-devel lib${NAME}1-doc"
 libloudmouth1_0_SUMMARY="${SUMMARY} (runtime)"
 libloudmouth1_0_REQUIRES="ca-certificates"
-libloudmouth1_0_CONTENTS="usr/bin/cyg${PN}-1-0.dll usr/share/doc/"
+libloudmouth1_0_CONTENTS="usr/bin/cyg${NAME}-1-0.dll usr/share/doc/"
 libloudmouth1_devel_SUMMARY="${SUMMARY} (development)"
-libloudmouth1_devel_CONTENTS='usr/include/ usr/lib/ usr/share/gtk-doc/'
+libloudmouth1_devel_CONTENTS='usr/include/ usr/lib/'
+libloudmouth1_doc_CATEGORY="Doc"
+libloudmouth1_doc_CONTENTS='usr/share/gtk-doc/'
 
 DIFF_EXCLUDES="loudmouth.spec"
 
