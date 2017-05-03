@@ -1,0 +1,20 @@
+--- origsrc/loudmouth-1.5.3/configure.ac	2016-02-14 11:23:28.000000000 -0600
++++ src/loudmouth-1.5.3/configure.ac	2017-05-03 11:02:55.070614100 -0500
+@@ -36,7 +36,6 @@ if test "$os_win32" = "yes"; then
+   enable_shared=yes
+ 
+   CFLAGS="$CFLAGS -mms-bitfields"
+-  LDFLAGS="$LDFLAGS -no-undefined"
+ fi
+ 
+ AC_PROG_CC([cc gcc])
+--- origsrc/loudmouth-1.5.3/loudmouth/Makefile.am	2016-02-14 11:05:11.000000000 -0600
++++ src/loudmouth-1.5.3/loudmouth/Makefile.am	2017-05-03 11:03:19.568362400 -0500
+@@ -115,6 +115,7 @@ libloudmouth_1_la_LIBADD =
+ 
+ libloudmouth_1_la_LDFLAGS =                                 \
+ 	-version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE)    \
++	-no-undefined \
+ 	-export-symbols $(srcdir)/loudmouth.sym
+ 
+ libloudmouthincludedir = $(includedir)/loudmouth-1.0/loudmouth
